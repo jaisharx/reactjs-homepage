@@ -1,9 +1,10 @@
 import { Container as ChakraContainer } from '@chakra-ui/react'
+import { ReactChild } from 'react'
 
-export default function Container({ children }) {
-  return (
-    <ChakraContainer maxW="container.xl">
-      {children}
-    </ChakraContainer>
-  )
+type AppProps = {
+  children: ReactChild
+}
+
+export default function Container({ children }: AppProps) {
+  return <ChakraContainer maxW="container.xl">{children}</ChakraContainer>
 }
